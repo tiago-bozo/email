@@ -19,18 +19,20 @@ function App() {
     const templateParams = {
       from_name: name,
       message: message,
-      email: email,
+      email: email
     }
     
-    emailjs.send("service_mzjzuzu", "template_uw6jx67", templateParams, "lV74Uo-cB6U0-z-iF" )
+    emailjs.send("service_h2y0kne", "template_uw6jx67", templateParams, "lV74Uo-cB6U0-z-iF" )
     .then((response) =>{
-      console.log ("EMAIL ENVIADO",response.status,response.text)
+      console.log ("EMAIL ENVIADO", response.status, response.text)
       setName ('')
       setEmail('')
       setMessage('')
 
-    }, (err)=>{})
-    console.log ("ERRO: ", err)
+    }, (err)=>{ 
+
+      console.log ("ERRO: ", err)
+    })
   }
 
   return (
